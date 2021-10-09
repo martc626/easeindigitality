@@ -1,14 +1,73 @@
 body {
 	margin: 0;
 	padding: 0;
-	background-color: skyblue;	
+	background-color: skyblue;
+	height: 400vh;
+}
+
+h1, h3, .enter {
+	color: white;
+	text-align: center;
 }
 
 h1 {
-	color: white;
-	font-family: lisbeth-display,sans-serif;
+	font-family: lisbeth-display, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	font-size: 130pt;
-	text-align: center;
+	margin-bottom: 0;
+	color: yellow;
+}
+
+h3 {
+	font-family: mr-eaves-sans, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 40pt;
+	margin: 0;
+}
+
+.enter {
+	margin: 20px;
+}
+
+button {
+	color: white;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: transparent;
+	font-family: mr-eaves-sans, sans-serif;
+	font-weight: 200;
+	font-style: normal;
+	font-size: 13pt;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+#cloud-1 {
+	width: 500px;
+	cursor: pointer;
+	animation: cloud 10s infinite ease-in-out;
+	position: absolute;
+    top: 5%;
+    right: 5%;
+}
+
+#cloud-1:hover {
+	animation-play-state: paused;
+}
+
+@keyframes cloud {
+	0%, 100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.5;
+		transform: scale(1.3);
+	}
 }
