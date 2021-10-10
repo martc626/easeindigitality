@@ -62,12 +62,39 @@ a {
 	width: 650px;
 	cursor: pointer;
 	animation: cloud 10s infinite ease-in-out;
-	position: absolute;
-    top: 2vh;
+	position: fixed;
+    top: -5vh;
     right: -10vw;
+    z-index: -1;
 }
 
 #cloud-1:hover  {
+	animation-play-state: paused;
+}
+
+#cloud-2 {
+	width: 550px;
+	cursor: pointer;
+	animation: cloud 10s infinite ease-in-out;
+	position: fixed;
+    top: 35vh;
+    left: -5vw;
+}
+
+#cloud-2:hover  {
+	animation-play-state: paused;
+}
+
+#cloud-3 {
+	width: 350px;
+	cursor: pointer;
+	animation: cloud 10s infinite ease-in-out;
+	position: fixed;
+    top: 75vh;
+    right: 25vw;
+}
+
+#cloud-3:hover  {
 	animation-play-state: paused;
 }
 
@@ -81,19 +108,6 @@ a {
 		opacity: 0.5;
 		transform: scale(1.3);
 	}
-}
-
-#cloud-2 {
-	width: 550px;
-	cursor: pointer;
-	animation: cloud 10s infinite ease-in-out;
-	position: absolute;
-    top: 35vh;
-    left: -5vw;
-}
-
-#cloud-2:hover  {
-	animation-play-state: paused;
 }
 
 #star {
