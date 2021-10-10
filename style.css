@@ -84,7 +84,7 @@ a {
 }
 
 #cloud-2 {
-	width: 600px;
+	width: 550px;
 	cursor: pointer;
 	animation: cloud 10s infinite ease-in-out;
 	position: absolute;
