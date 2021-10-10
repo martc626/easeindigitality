@@ -1,8 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	background-color: skyblue;
-	height: 400vh;
+  	background: linear-gradient(to bottom, #9FCBFF 0%, #4c90c1 50%, #14164A 100%);
+	height: 600vh;
+	width: 100vw;
 }
 
 h1, h3, .enter {
@@ -25,10 +30,11 @@ h3 {
 	font-style: normal;
 	font-size: 40pt;
 	margin: 0;
+	margin-top: -25px;
 }
 
 .enter {
-	margin: 20px;
+	margin: 40px;
 }
 
 button {
@@ -47,16 +53,21 @@ button:hover {
 	background-color: rgba(255, 255, 255, 0.3);
 }
 
+a {
+	text-decoration: none;
+	color: white;
+}
+
 #cloud-1 {
-	width: 500px;
+	width: 650px;
 	cursor: pointer;
 	animation: cloud 10s infinite ease-in-out;
 	position: absolute;
-    top: 5%;
-    right: 5%;
+    top: 2vh;
+    right: -10vw;
 }
 
-#cloud-1:hover {
+#cloud-1:hover  {
 	animation-play-state: paused;
 }
 
@@ -69,5 +80,35 @@ button:hover {
 	50% {
 		opacity: 0.5;
 		transform: scale(1.3);
+	}
+}
+
+#cloud-2 {
+	width: 600px;
+	cursor: pointer;
+	animation: cloud 10s infinite ease-in-out;
+	position: absolute;
+    top: 35vh;
+    left: -5vw;
+}
+
+#cloud-2:hover  {
+	animation-play-state: paused;
+}
+
+#star {
+	width: 550px;
+	animation: star 1s infinite ease-in-out;
+	position: absolute;
+    top: 545vh;
+}
+
+@keyframes star {
+	0%, 100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.2;
 	}
 }
