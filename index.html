@@ -4,18 +4,6 @@
 		<title> Luna's Website</title> 
 		<link href="style.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.typekit.net/okz1lsk.css">
-		<script>
-			let page = document.querySelector('body')
-			let img = document.querySelector('img')
-
-			// floating img
-			page.addEventListener('mousemove', (event) => {
-				img.style.transform = `translate(${floating(event,50)[0]}px, ${floating(event,50)[1]}px)`
-			})
-	        page.addEventListener('touchmove', (event) => {
-	          img.style.transform = `translate(${touch(event,50)[0]}px, ${touch(event,50)[1]}px)`
-	        })						
-		</script>
 	</head> 	
 	<body>
 		<div class="intro">
@@ -42,7 +30,9 @@
 			<img id="star" src="assets/stars.png">
 		</div>
 
-
+		<div class="moon">
+			<img id="moon" src="assets/moon.png">
+		</div>
 
 		<script src="script.js"></script>
 				
