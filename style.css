@@ -6,9 +6,11 @@ body {
 	margin: 0;
 	padding: 0;
   	background: linear-gradient(to bottom, #9FCBFF 0%, #4c90c1 50%, #14164A 100%);
-	height: 600vh;
+	height: 700vh;
 	width: 100vw;
 }
+
+/*header*/
 
 h1, h3, .enter {
 	color: white;
@@ -61,7 +63,7 @@ a {
 #cloud-1 {
 	width: 650px;
 	cursor: pointer;
-	animation: cloud 10s infinite ease-in-out;
+	animation: clouds 10s infinite ease-in-out;
 	position: fixed;
     top: -5vh;
     right: -10vw;
@@ -74,8 +76,7 @@ a {
 
 #cloud-2 {
 	width: 550px;
-	cursor: pointer;
-	animation: cloud 10s infinite ease-in-out;
+	animation: clouds 10s infinite ease-in-out;
 	position: fixed;
     top: 35vh;
     left: -5vw;
@@ -87,8 +88,7 @@ a {
 
 #cloud-3 {
 	width: 350px;
-	cursor: pointer;
-	animation: cloud 10s infinite ease-in-out;
+	animation: clouds 10s infinite ease-in-out;
 	position: fixed;
     top: 75vh;
     right: 25vw;
@@ -98,7 +98,7 @@ a {
 	animation-play-state: paused;
 }
 
-@keyframes cloud {
+@keyframes clouds {
 	0%, 100% {
 		opacity: 1;
 		transform: scale(1);
@@ -110,11 +110,320 @@ a {
 	}
 }
 
+
+/*content*/
+
+.rat {
+	width: 500px;
+	position: absolute;
+    top: 540vh;
+    left: 10vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.rat-animation {
+	animation: rat 2s 1 ease-in-out;
+	transform: translate(-20vw, 10vh) scale(0.3);
+	z-index: 2;
+}
+
+@keyframes rat {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-20vw, 10vh) scale(0.3);
+	}
+}
+
+.rat-web, .rat-desc, .rat-count, .rat-link, .smiley-web, .smiley-desc, .smiley-link, .cloud-web, .cloud-desc, .cloud-link, .wikibook-container, .wikibook-desc, .kumquat-container, .kumquat-desc, .album-container, .album-desc, .covid-container, .covid-desc, .lock-container, .lock-desc {
+	position: fixed;
+	border: 2px solid white;
+	border-radius: 10px;
+	display: none;
+}
+
+.rat-web, .smiley-web, .cloud-web {
+    top: 5vh;
+    right: 4vw;		
+    z-index: 1;
+}
+
+.rat-desc, .smiley-desc, .cloud-desc, .wikibook-desc, .kumquat-desc, .album-desc, .covid-desc, .lock-desc {
+	width: 280px;
+    top: 5vh;
+    left: 3vw;
+	padding: 10px;
+    font-family: mr-eaves-sans, sans-serif;
+	font-size: 14pt;
+	color: white;
+	z-index: 1;
+}
+
+.rat-count {
+	width: 300px;
+    top: 38vh;
+    left: 3vw;
+	transition: all 0.5s ease-in-out;
+	z-index: 3;
+}
+
+.rat-count:hover {
+	width: 40%;
+}
+
+.rat-link, .smiley-link, .cloud-link {
+	font-family: mr-eaves-sans, sans-serif;
+    bottom: 5vh;
+    right: 4vw;	
+	background-color: transparent;
+	padding: 5px;	
+	z-index: 1;
+}
+
+.rat-link:hover, .smiley-link:hover, .cloud-link:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.smiley {
+	width: 500px;
+	position: absolute;
+    top: 480vh;
+    right: 10vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.smiley-animation {
+	animation: smiley 2s 1 ease-in-out;
+	transform: translate(-65vw, 25vh) scale(0.2);
+	z-index: 2;
+}
+
+@keyframes smiley {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-65vw, 25vh) scale(0.2);
+	}
+}
+
+.cloud {
+	width: 400px;
+	position: absolute;
+    top: 430vh;
+    left: 10vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;	
+}
+
+.cloud-animation {
+	animation: cloud 2s 1 ease-in-out;
+	transform: translate(-17vw, 15vh) scale(0.3);
+	z-index: 2;
+}
+
+@keyframes cloud {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-17vw, 15vh) scale(0.3);
+	}
+}
+
+.album {
+	width: 350px;
+	position: absolute;
+    top: 390vh;
+    right: 5vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.video {
+	height: 76vh;
+	margin: 10px;
+}
+
+.album-animation {
+	animation: album 2s 1 ease-in-out;
+	transform: translate(-75vw, 5vh) scale(0.4);
+	z-index: 2;
+}
+
+@keyframes album {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-75vw, 5vh) scale(0.4);
+	}
+}
+
+.wikibook {
+	width: 350px;
+	position: absolute;
+    top: 330vh;
+    left: 30vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.mockup {
+	height: 85vh;
+	margin: 10px;
+}
+
+.wikibook-animation {
+	animation: wikibook 2s 1 ease-in-out;
+	transform: translate(-33vw, 15vh) scale(0.4);
+	z-index: 2;
+}
+
+@keyframes wikibook {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-33vw, 15vh) scale(0.4);
+	}
+}
+
+.wikibook-container, .kumquat-container, .album-container, .covid-container, .lock-container {
+    top: 5vh;
+    right: 4vw;		
+    z-index: 1;
+    width: 70vw;
+    height: fit-content;	
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+    display: none;
+}
+
+.kumquat {
+	width: 350px;
+	position: absolute;
+    top: 260vh;
+    right: 10vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.kumquat-animation {
+	animation: kumquat 2s 1 ease-in-out;
+	transform: translate(-70vw, 15vh) scale(0.4);
+	z-index: 2;
+}
+
+.poster {
+	height: 82vh;
+	margin: 10px;
+}
+
+@keyframes kumquat {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-70vw, 15vh) scale(0.4);
+	}
+}
+
+.covid {
+	width: 350px;
+	position: absolute;
+    top: 220vh;
+    left: 5vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.page {
+	height: 75vh;
+	margin: 10px;
+}
+
+.covid-animation {
+	animation: covid 2s 1 ease-in-out;
+	transform: translate(-10vw, 5vh) scale(0.4);
+	z-index: 2;
+}
+
+@keyframes covid {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-10vw, 5vh) scale(0.4);
+	}
+}
+
+.lock {
+	width: 350px;
+	position: absolute;
+    top: 170vh;
+    right: 30vw;	
+    animation: float 10s infinite ease-in-out;
+    cursor: pointer;
+}
+
+.locks {
+	height: 75vh;
+	margin: 10px;	
+}
+
+.lock-animation {
+	animation: lock 2s 1 ease-in-out;
+	transform: translate(-50vw, 5vh) scale(0.4);
+	z-index: 2;
+}
+
+@keyframes lock {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translate(-50vw, 5vh) scale(0.4);
+	}
+}
+
+
+
+@keyframes float {
+	0%, 100% {
+		transform: translateY(-2vh) rotate(5deg);
+	}
+
+	50% {
+		transform: translateY(2vh) rotate(-5deg);
+		filter: blur(5px);
+	}
+}
+
+
+
+
+
+/*footer*/
+
 #star {
 	width: 550px;
 	animation: star 1s infinite ease-in-out;
 	position: absolute;
-    top: 545vh;
+    top: 645vh;
 }
 
 @keyframes star {
@@ -131,9 +440,10 @@ a {
 	width: 360px;
 	animation: moon 20s infinite ease-in-out;
 	position: absolute;
-    top: 510vh;
+    top: 610vh;
     right: 5vw;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 @keyframes moon {
@@ -151,4 +461,27 @@ a {
 		transform: rotate(360deg);
 		filter: drop-shadow(0px 0px 10px white);
 	}
+}
+
+.about-me {
+	width: 600px;
+	font-family: mr-eaves-sans, sans-serif;
+	font-size: 18pt !important;
+	position: absolute;
+	top: 670vh;
+	right: 8vw;
+	border: 2px solid white;
+	border-radius: 10px;
+	background-color: transparent;
+	color: white;
+	padding: 20px;
+	display: none;
+}
+
+span.display {
+	font-family: lisbeth-display, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 18pt;
+	color: yellow;	
 }
